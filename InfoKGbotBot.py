@@ -57,7 +57,7 @@ one_time_keyboard = True
 
 @app.on_message(filters.regex(r"Дальше") & filters.private)
 async def func8(app,msg):
-  await app.send_message(msg.chat.id,"__**После успешной авторизации бота, в консоли должна появиться ссылка, берем её и идем на сайт <u>UptimeRobot</u>**__",
+  await app.send_message(msg.chat.id,"__**После успешной авторизации бота, в консоли должна появиться ссылка, берем её и идем на сайт <u>UptimeRobot.com</u>**__",
         reply_markup = ReplyKeyboardMarkup(
     [
       ["", "Дaльше"],
