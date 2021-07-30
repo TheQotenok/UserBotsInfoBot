@@ -127,7 +127,7 @@ async def func4(app,msg):
     ],
 resize_keyboard = True,
 one_time_keyboard = True
-  ))
+  )
 @app.on_message(filters.reply  & filters.regex(r"[Кк]усь"))
 async def func5(app,msg):
   await msg.reply("Щас укушу...")
