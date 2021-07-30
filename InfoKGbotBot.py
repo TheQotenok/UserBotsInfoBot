@@ -80,7 +80,7 @@ one_time_keyboard = True
   ))
 @app.on_message(filters.regex(r"Готово") & filters.private)
 async def func10(app,msg):
- await app.send_message(msg.chat.id,"__**Готово(Не забудьте написать свой номер телефона и код.)/nАвторы юзербота: @cemiix, @pomyanem_ne_tegai/nАвтор бота: @qotenok**__",
+ await app.send_message(msg.chat.id,"__**Готово(Не забудьте написать свой номер телефона и код.)\nАвторы юзербота: @cemiix, @pomyanem_ne_tegai\nАвтор бота: @qotenok**__",
  reply_markup = ReplyKeyboardMarkup(
      [
       ["", "Поставить через приложение Termux"],
@@ -120,7 +120,7 @@ one_time_keyboard = True
 
 @app.on_message(filters.regex(r"Написал") & filters.private)
 async def func4(app,msg):
-  await app.send_message(msg.chat.id,"__**После всего этого пишем:**__/n<code>git clone https://github.com/Laimusp/KGBotPublic && cd KGBotPublic</code>/n__**И наконец прописываем:**__ <code>python main.py</code>/nАвторы юзербота: @cemiix, @pomyanem_ne_tegai/nАвтор бота: @qotenok",
+  await app.send_message(msg.chat.id,"__**После всего этого пишем:**__\n<code>git clone https://github.com/Laimusp/KGBotPublic && cd KGBotPublic</code>\n__**И наконец прописываем:**__ <code>python main.py</code>\n**__Авторы юзербота: @cemiix, @pomyanem_ne_tegai\nАвтор бота: @qotenok__**",
    reply_markup = ReplyKeyboardMarkup(
     [
       ["", "Поставить через приложение Termux"],
