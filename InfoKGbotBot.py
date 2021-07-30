@@ -86,6 +86,9 @@ async def func10(app,msg):
       ["Поставить через сайт Repl.it"],
       
     ],
+ resize_keyboard = True,
+one_time_keyboard = True
+  )
 
 
 @app.on_message(filters.regex(r"Поставить через приложение Termux") & filters.private)
