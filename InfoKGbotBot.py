@@ -20,7 +20,7 @@ async def func(app,msg):
         
 @app.on_message(filters.regex(r"/start") & filters.private)
 async def func1(app,msg):
-    await msg.reply(f"__**Привет, я - бот инструктор по установке Kgbot^a\nМои команды:__**\n<code>/instruction</code>")
+    await msg.reply(f"__**Привет, я - бот инструктор по установке Kgbot^a.\nМои команды:__**\n**__/instruction__**")
     
 @app.on_message(filters.regex(r"/instruction") & filters.private)
 async def func1(app,msg):
