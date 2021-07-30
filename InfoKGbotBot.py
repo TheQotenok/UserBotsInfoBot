@@ -120,6 +120,7 @@ one_time_keyboard = True
 @app.on_message(filters.regex(r"Написал") & filters.private)
 async def func4(app,msg):
   await app.send_message(msg.chat.id,"__**После всего этого пишем:**__/n<code>git clone https://github.com/Laimusp/KGBotPublic && cd KGBotPublic</code>\n__**И наконец прописываем:**__ <code>python main.py</code>/nАвторы юзербота: @cemiix, @pomyanem_ne_tegai\nАвтор бота: @qotenok",
+   reply_markup = ReplyKeyboardMarkup(
     [
       ["", "Поставить через приложение Termux"],
       ["Поставить через сайт Repl.it"],
@@ -127,7 +128,7 @@ async def func4(app,msg):
     ],
 resize_keyboard = True,
 one_time_keyboard = True
-  )
+  ))
 @app.on_message(filters.reply  & filters.regex(r"[Кк]усь"))
 async def func5(app,msg):
   await msg.reply("Щас укушу...")
