@@ -17,7 +17,11 @@ app = Client(
 @app.on_message(filters.regex(r"[Дд][Аа][Рр][Оо][Вв][Аа] [Кк][Оо][Тт]"))
 async def func(app,msg):
      await msg.reply(f"Привет, {msg.from_user.mention}")
-
+        
+@app.on_message(filters.regex(r"/start") & filters.private)
+async def func1(app,msg):
+    await msg.reply(f"__**Привет, я - бот инструктор по установке Kgbot^a\nМои команды:__**\n<code>/instruction</code>")
+    
 @app.on_message(filters.regex(r"/instruction") & filters.private)
 async def func1(app,msg):
   await app.send_message(msg.chat.id,"__**Хорошо, Kgbot'а можно поставить через приложение [Termux](https://play.google.com/store/apps/details?id=com.termux) и сайт replit.com, какой способ выбираете?**__",
