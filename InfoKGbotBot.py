@@ -150,7 +150,7 @@ async def func5(app,msg):
 
 admins = ['1186358927', '1846816124']
 
-@Client.on_message(filters.reply & filters.command('unmute', '/'))
+@app.on_message(filters.reply & filters.command('unmute', '/'))
 async def unmute_user(app, msg):
   ids = msg.from_user.id
   if ids not in admins:
@@ -163,7 +163,7 @@ async def unmute_user(app, msg):
       pass
     await msg.delete()
 
-@Client.on_message(filters.reply & filters.command('ban', '/'))
+@app.on_message(filters.reply & filters.command('ban', '/'))
 async def ban_user(app, msg):
   ids = msg.from_user.id
   if ids not in admins:
@@ -180,7 +180,7 @@ async def ban_user(app, msg):
     except pyrogram.errors.exceptions.bad_request_400.UserAdminInvalid:
       pass
 
-@Client.on_message(filters.reply & filters.command('pr', '/'))
+@app.on_message(filters.reply & filters.command('pr', '/'))
 async def promote_user(app, msg):
   ids = msg.from_user.id
   if ids not in admins:
