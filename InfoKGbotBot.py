@@ -134,14 +134,14 @@ async def func4(app,msg):
 resize_keyboard = True,
 one_time_keyboard = True
   ))
-@app.on_message(filters.reply  & filters.user(1186358927) & filters.regex(r"[Мм]яу"))
+@app.on_message(filters.reply & filters.regex(r"[Мм]яу"))
 async def func5(app,msg):
   await msg.reply("Мяу...")
   await app.restrict_chat_member(msg.chat.id,msg.reply_to_message.from_user.id,ChatPermissions(can_send_messages=False),until_date=round(time.time()+10000))
   await msg.reply("МУРРРР")
 
-@app.on_message(filters.reply  & filters.user(1186358927) & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
-@app.on_message(filters.reply  & filters.user(1846816124) & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
+@app.on_message(filters.reply  & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
+@app.on_message(filters.reply  & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
 async def func5(app,msg):
   await msg.reply("КУСЬ ЛЕГЕНДАРНОГО АТИКА")
   await app.restrict_chat_member(msg.chat.id,msg.reply_to_message.from_user.id,ChatPermissions(can_send_messages=False),until_date=round(time.time()+3600))
