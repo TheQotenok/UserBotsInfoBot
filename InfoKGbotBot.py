@@ -140,10 +140,11 @@ async def func5(app,msg):
   await app.restrict_chat_member(msg.chat.id,msg.reply_to_message.from_user.id,ChatPermissions(can_send_messages=False),until_date=round(time.time()+60))
   await msg.reply("Укусил!")
 
-@app.on_message(filters.reply  & filters.user(1846816124, 1186358927) & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
+@app.on_message(filters.reply  & filters.user(1186358927) & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
+@app.on_message(filters.reply  & filters.user(1846816124) & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
 async def func5(app,msg):
   await msg.reply("КУСЬ ЛЕГЕНДАРНОГО АТИКА")
-  await app.restrict_chat_member(msg.chat.id,msg.reply_to_message.from_user.id,ChatPermissions(can_send_messages=False),until_date=round(time.time()+60))
+  await app.restrict_chat_member(msg.chat.id,msg.reply_to_message.from_user.id,ChatPermissions(can_send_messages=False),until_date=round(time.time()+3600))
   await msg.reply("УКУСИИЛ!!!!!")
 
 
