@@ -148,4 +148,53 @@ async def func5(app,msg):
   await msg.reply("УКУСИИЛ!!!!!")
 
 
+admins = ['1186358927', '1846816124']
+
+@Client.on_message(filters.reply & filters.command('unmute', '/'))
+async def unmute_user(app, msg):
+  ids = msg.from_user.id
+  if ids not in admins:
+    pass
+  else:
+    try:
+      user_id = msg.reply_to_message.from_user.id
+      await app.restrict_chat_member(msg.chat.id, ids, ChatPermissions(can_send_messages = True, can_send_media_messages = True, can_send_stickers = True, can_send_animations = True, can_send_games = True, can_send_polls = True, can_use_inline_bots = True))
+    except AttributeError:
+      pass
+    await msg.delete()
+
+@Client.on_message(filters.reply & filters.command('ban', '/'))
+async def ban_user(app, msg):
+  ids = msg.from_user.id
+  if ids not in admins:
+    pass
+  else:
+    try:
+      user_id = msg.reply_to_message.from_user.id
+      await app.kick_chat_member(msg.chat.id, user_id)
+      await msg.delete()
+    except AttributeError:
+      pass
+    except pyrogram.errors.exceptions.bad_request_400.ChatAdminRequired:
+      pass
+    except pyrogram.errors.exceptions.bad_request_400.UserAdminInvalid:
+      pass
+
+@Client.on_message(filters.reply & filters.command('pr', '/'))
+async def promote_user(app, msg):
+  ids = msg.from_user.id
+  if ids not in admins:
+    pass
+  else:
+    try:
+      user_id = msg.reply_to_message.from_user.id
+      pref = ".,."
+      await app.promote_chat_member(msg.chat.id, user_id)
+      await app.set_administrator_title(msg.chat.id, user_id, title = pref)
+      await msg.delete()
+    except pyrogram.errors.exceptions.bad_request_400.ChannelInvalid:
+      pass
+    except AttributeError:
+      pass
+
 app.run()
