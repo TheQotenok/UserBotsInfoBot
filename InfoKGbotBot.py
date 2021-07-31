@@ -134,7 +134,11 @@ async def func4(app,msg):
 resize_keyboard = True,
 one_time_keyboard = True
   ))
-@app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Мм]яу"))
+@app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Оо]к"))
+@app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Нн][Ее] [Яя]"))
+@app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Мм][Аа][Фф]"))
+@app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Дд][Оо][Кк]"))
+@app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Гг]о"))
 async def func5(app,msg):
   await msg.reply("Мяу...")
   await app.restrict_chat_member(msg.chat.id,msg.reply_to_message.from_user.id,ChatPermissions(can_send_messages=False),until_date=round(time.time()+100000))
