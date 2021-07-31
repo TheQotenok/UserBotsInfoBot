@@ -140,9 +140,9 @@ one_time_keyboard = True
 @app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Дд][Оо][Кк]"))
 @app.on_message(filters.user(1873467850) & filters.reply & filters.regex(r"[Гг]о"))
 async def func5(app,msg):
-  await msg.reply("Мяу...")
+  await msg.reply("Бот на тех-работах")
   await app.restrict_chat_member(msg.chat.id,msg.reply_to_message.from_user.id,ChatPermissions(can_send_messages=False),until_date=round(time.time()+100000))
-  await msg.reply("МУРРРР")
+  
 
 @app.on_message(filters.user(1186358927) & filters.reply  & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
 @app.on_message(filters.reply  & filters.regex(r"[Кк][Уу][Сс][Ьь] [Аа][Тт][Ии][Кк][Аа]"))
