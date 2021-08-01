@@ -7,7 +7,7 @@ import os
 
 app = Client(
     "my_bot",
-    bot_token='os.environ(['token'])', 
+    bot_token='os.environ(["token"])', 
     api_hash = "eb06d4abfb49dc3eeb1aeb98ae0f581e",                                                                                                                   
     api_id = 6
 )
