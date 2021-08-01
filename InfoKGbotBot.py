@@ -3,11 +3,12 @@ from pyrogram.types import ReplyKeyboardMarkup
 from pyrogram.types import ChatPermissions
 import time
 import asyncio 
+import os
 
 app = Client(
     "my_bot",
-    bot_token="1940303458:AAGKZNxaSqvBdR9s6sS6qBfXYt5C0zZJEzc", 
-    api_hash = "eb06d4abfb49dc3eeb1aeb98ae0f581e",
+    bot_token="os.environ(["token"])", 
+    api_hash = "eb06d4abfb49dc3eeb1aeb98ae0f581e",                                                                                                                   
     api_id = 6
 )
 #ПРивет
