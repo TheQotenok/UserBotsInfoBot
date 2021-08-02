@@ -11,6 +11,7 @@ app = Client(
     api_hash = "eb06d4abfb49dc3eeb1aeb98ae0f581e",                                                                                                                   
     api_id = 6
 )
+
 #ПРивет
 @app.on_message(filters.regex(r"[Пп][Рр][Ии][Вв][Ее][Тт] [Кк][Оо][Тт]"))
 @app.on_message(filters.regex(r"[Дд][Аа][Рр][Оо][Вв][Аа], [Кк][Оо][Тт]"))
